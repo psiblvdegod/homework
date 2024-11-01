@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-bool validation(int array[], int arraySize) {
+bool isSorted(int array[], int arraySize) {
     for (int i = 1; i < arraySize; ++i) {
         if (array[i - 1] > array[i]) {
             return false;
@@ -12,12 +12,12 @@ bool validation(int array[], int arraySize) {
 }
  
 void bogoSort(int array[], int arraySize) {
-    while (!validation(array, arraySize)) {
+    while (!isSorted(array, arraySize)) {
         for (int i = 0; i < arraySize; ++i) {
-            int temp = array[i];
-            int index = rand() % arraySize;
-            array[i] = array[index];
-            array[index] = temp;
+            int tempForSwap = array[i];
+            int randomIndex = rand() % arraySize;
+            array[i] = array[randomIndex];
+            array[randomIndex] = tempForSwap;
         }
     }
 }
@@ -26,7 +26,7 @@ bool bogoSortTest() {
     int testArray[] = {1, 3, 4, 6, 9};
     int testArraySize = sizeof(testArray) / sizeof(int);
     bogoSort(testArray, testArraySize);
-    return validation(testArray, testArraySize);
+    return isSorted(testArray, testArraySize);
 }
 
 int main(void) {
