@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/workspaces/homework/vscode/exponentiation",
-      "program": "/workspaces/homework/vscode/exponentiation/build/Debug/outDebug",
+      "cwd": "/workspaces/homework/01_11_task2",
+      "program": "/workspaces/homework/01_11_task2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
