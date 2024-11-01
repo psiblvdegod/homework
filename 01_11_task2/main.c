@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
+#include "bogoSort.h"
 
 bool isSorted(int array[], int arraySize) {
     for (int i = 1; i < arraySize; ++i) {
