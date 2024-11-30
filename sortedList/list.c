@@ -72,12 +72,11 @@ void deleteList(List ** list) {
 }
 
 
-//дописать
 Value getValue(List * list, Position * mainPosition, bool * errorCode) {
     ListElement * position = *mainPosition;
-    if (position == NULL) { //помещает на стражнтка если temp только создан
+    if (position == NULL) { 
         position = list->head;
-        *mainPosition = position; //мейби не нужно
+        *mainPosition = position; 
     }
     if (position->next != NULL) {
         Value value = position->next->value;
